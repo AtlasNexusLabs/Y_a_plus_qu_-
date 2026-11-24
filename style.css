@@ -16,7 +16,7 @@ aside h1{font:700 20px/1.2 Georgia,serif;margin:0;color:var(--acc)}
 input,textarea{font:inherit;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:8px 10px;width:100%}
 textarea{min-height:70px;resize:vertical}
 button.btn{background:var(--acc);color:#fff;border:0;border-radius:8px;padding:8px 14px;font:inherit;cursor:pointer;white-space:nowrap}
-button.ghost{background:transparent;color:var(--mut);border:1px solid var(--line)}
+button.ghost,label.ghost{background:transparent;color:var(--mut);border:1px solid var(--line)}
 main{padding:20px;max-width:760px;width:100%}
 h2{font:700 22px/1.2 Georgia,serif;margin:0 0 12px}
 .tabs{display:flex;gap:6px;margin-bottom:16px;overflow-x:auto}
@@ -34,6 +34,7 @@ label:first-child{margin-top:0}
 .tot{display:flex;justify-content:space-between;padding:6px 0;border-top:1px solid var(--line);margin-top:6px}
 .mut{color:var(--mut);font-size:14px}
 .empty{text-align:center;padding:50px 10px;color:var(--mut)}
+.rec-head{display:grid;grid-template-columns:1fr auto;gap:8px;align-items:center}
 @media (max-width:700px){
 .app{grid-template-columns:1fr}
 aside{border-right:0;border-bottom:1px solid var(--line);padding:12px}
@@ -42,7 +43,14 @@ aside{border-right:0;border-bottom:1px solid var(--line);padding:12px}
 main{padding:14px}
 .item{grid-template-columns:auto 1fr 76px auto}
 .row{grid-template-columns:70px 1fr}
+.rec-head{grid-template-columns:1fr}
 }
 .tools{display:flex;gap:6px;margin-top:14px;flex-wrap:wrap}
 .tools .btn{font-size:13px;padding:6px 10px}
 .tools input{display:none}
+label.ghost{display:inline-block;border-radius:8px;padding:6px 10px;font-size:13px;cursor:pointer}
+.dep{display:grid;grid-template-columns:150px 1fr 110px auto;gap:8px}
+.mois{margin-top:14px;border-top:1px solid var(--line);padding-top:8px}
+.ligne{display:grid;grid-template-columns:1fr auto auto;gap:8px;align-items:center;padding:4px 0}
+.ligne .btn{padding:4px 10px}
+@media (max-width:700px){.dep{grid-template-columns:1fr 1fr}.dep .btn{grid-column:1/-1}}
